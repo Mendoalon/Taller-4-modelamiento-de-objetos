@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @author Luis mendoza
  */
-public class Vehicle implements VehicleInterface {
+public class Vehicle  implements VehicleInterface{
 
     private int numPassengers;
     private boolean presPassengers;
@@ -28,15 +28,8 @@ public class Vehicle implements VehicleInterface {
         this.color = color;
     }
 
-    @Override
-    public String toString() {
-        return "Vehiculo:  " + "Número de pasajeros = " + numPassengers 
-                     + ", presencia de pasajeros = " + presPassengers + ", número de ruedas = " + numWheels 
-                    + ", fecha de matriculación = "+ dateRegistration + ", modo de circulación = " + forDesplazamineto 
-                    + ", color = " + color + '}';
-    }
 
-    @Override
+    
     public void createVehicle( ArrayList<Vehicle> vehicles) {
         Scanner scanner = new Scanner(System.in);
         
@@ -71,10 +64,10 @@ public class Vehicle implements VehicleInterface {
         
     }
 
-    @Override
+    
     public void showVehicle(ArrayList<Vehicle> vehicles) {
-        if (!(vehicles.size() <= 0))
-        {
+        if (!(vehicles.size() <= 0)) {
+            System.out.println("Caracterisiticas del vehiculo: ");
             for (Vehicle vehicle : vehicles) {
                 System.out.println(vehicle);
             }
@@ -83,8 +76,41 @@ public class Vehicle implements VehicleInterface {
         }
 
     }
-       
-        
+
+    public int getNumPassengers() {
+        return numPassengers;
+    }
+
+    public boolean isPresPassengers() {
+        return presPassengers;
+    }
+
+    public int getNumWheels() {
+        return numWheels;
+    }
+
+    public String getDateRegistration() {
+        return dateRegistration;
+    }
+
+    public String getForDesplazamineto() {
+        return forDesplazamineto;
+    }
+
+    public String getColor() {
+        return color;
+    }
+    
+    
+    
+    
+        @Override
+    public String toString() {
+        return  "número de pasajeros = " + numPassengers 
+                     + ", presencia de tripulación = " + ((presPassengers)? "si": "no")  + ", número de ruedas = " + numWheels 
+                    + ", fecha de matriculación = "+ dateRegistration + ", modo de circulación = " + forDesplazamineto 
+                    + ", color = " + color ;
+    }
         
     }
 
