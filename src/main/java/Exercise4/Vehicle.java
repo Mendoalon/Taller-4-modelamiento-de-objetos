@@ -1,5 +1,8 @@
 package Exercise4;
 
+/**
+ * Estas librería nos permite manejar: arrays y capturar de datos por teclado durante el programa
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,6 +12,9 @@ import java.util.Scanner;
  */
 public class Vehicle  implements VehicleInterface{
 
+    /**
+     * Declaración de los atributos de la clase Vehicle.
+     */
     private int numPassengers;
     private boolean presPassengers;
     private int numWheels;
@@ -19,6 +25,9 @@ public class Vehicle  implements VehicleInterface{
     public Vehicle() {
     }
 
+    /**
+     * Constructor: Crea una instancia de la clase Vehicle con valor en los atributos.
+     */
     public Vehicle(int numPassengers, boolean presPassengers, int numWheels, String dateRegistration, String forDesplazamineto, String color) {
         this.numPassengers = numPassengers;
         this.presPassengers = presPassengers;
@@ -29,11 +38,15 @@ public class Vehicle  implements VehicleInterface{
     }
 
 
-    
+     /**
+     * Método que creea 10 objetos tipo vehiculo y los guarda en un arrayList
+     *
+     * @param vehicles
+     */
     public void createVehicle( ArrayList<Vehicle> vehicles) {
         Scanner scanner = new Scanner(System.in);
         
-        for (int i = 1; i <= 1; i++) {
+        for (int i = 1; i <= 10; i++) {
                             System.out.println("Ingrese los datos del vehiculo # " + i);
                             
                             System.out.print("Numero de pasajeros: ");
@@ -64,7 +77,11 @@ public class Vehicle  implements VehicleInterface{
         
     }
 
-    
+    /**
+     * Método que permite mostrar los objetos tipo vehiculos con sus atributos
+     *
+     * @param numsRandoms
+     */
     public void showVehicle(ArrayList<Vehicle> vehicles) {
         if (!(vehicles.size() <= 0)) {
             System.out.println("Caracterisiticas del vehiculo: ");
@@ -77,6 +94,10 @@ public class Vehicle  implements VehicleInterface{
 
     }
 
+    /*
+    * Métodos para obtener los valores de las propiedades de la clase Vehicle.
+    *@return Devuelve el valor de las propiedades.
+    */
     public int getNumPassengers() {
         return numPassengers;
     }
@@ -103,8 +124,12 @@ public class Vehicle  implements VehicleInterface{
     
     
     
-    
-        @Override
+    /**
+    * Método toString muestra las propiedades de la clase Vehicle
+    *
+    * @return Una cadena que representa a los vehiculos con sus atributos concatenados.
+    */
+    @Override
     public String toString() {
         return  "número de pasajeros = " + numPassengers 
                      + ", presencia de tripulación = " + ((presPassengers)? "si": "no")  + ", número de ruedas = " + numWheels 

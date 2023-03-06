@@ -1,5 +1,8 @@
 package Exercise6;
 
+/**
+ * Estas librería nos permite manejar: vectores y capturar de datos por teclado durante el programa
+ */
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -9,6 +12,10 @@ import java.util.Vector;
  */
 public class Game {
 
+    /**
+     * Método que permite crear una lista de números ingresados por el usuario y mostrar si se repite algún número consecutivo
+     *
+     */    
     public void paly() {
         Vector<Integer> numbers = new Vector<>();
         Scanner scanner = new Scanner(System.in);

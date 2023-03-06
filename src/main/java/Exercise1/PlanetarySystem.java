@@ -11,6 +11,11 @@ public class PlanetarySystem implements PlanetInterface {
     // Constante de gravitación universal en N(m/kg)^2
     private final double unigravitation =  6.6743e-11; 
 
+      /**
+     * Array que permite crear los planetas
+     *
+     * @return celestialBody
+     */
     @Override
     public ArrayList createCelestialbody() {
         ArrayList<Planet> celestialBody = new ArrayList<>();
@@ -27,6 +32,11 @@ public class PlanetarySystem implements PlanetInterface {
         return celestialBody;
     }
 
+     /**
+     * Array que permite mostrar los planetas creados
+     *
+     * @param planets
+     */
     @Override
     public void viewPlanets(ArrayList<Planet> planets) {
 
@@ -37,6 +47,11 @@ public class PlanetarySystem implements PlanetInterface {
 
     }
 
+    /**
+     * Método que realiza la operación gravitatoria
+     *
+     * @param planets
+     */
     @Override
     public void gravitAttraction(ArrayList<Planet> planets) {
         Scanner scanner = new Scanner(System.in);

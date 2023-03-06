@@ -1,8 +1,14 @@
 
 package Exercise5;
 
+/**
+ * Importamos la clase vehiculo pára implementar en durante el programa
+ */
 import Exercise4.Vehicle;
-import java.util.ArrayList;
+
+/**
+ * Esta librería nos permite manejar: listas y colecciones  durante el programa
+ */
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,6 +18,12 @@ import java.util.Scanner;
  */
 public class Menu {
     
+    
+    /**
+     * Método que permite capturar y guardar objecto tipo vehiculo en un lista
+     *
+     * @param vehicles
+     */
     public  void showMenu( List<Vehicle> vehicles){
         Scanner scanner = new Scanner(System.in);
                             

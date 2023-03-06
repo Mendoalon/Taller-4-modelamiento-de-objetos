@@ -1,6 +1,8 @@
 package Exercise3;
 
-
+/**
+ * Esta librería nos permite manejar: arrays, colecciones y listas durante el programa
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +13,11 @@ import java.util.List;
  */
 public class Methods implements MethodsInteface {
 
+        /**
+     * Método que retorna números reales aleatorios
+     *
+     * @return randoms
+     */
     @Override
     public List<Double> genRamNumbers() {
         List<Double> randoms = new ArrayList<>();
@@ -20,9 +27,14 @@ public class Methods implements MethodsInteface {
         } 
         
         return randoms;
-    }
-        
-        @Override
+    }   
+    
+    /**
+     * Método que permite mostrar los números reales aleatorios
+     *
+     * @param numsRandoms
+     */
+    @Override
     public void showRanNumbers(List<Double> numsRandoms) {
         
         System.out.println("Los números aleatorio generado son:");
@@ -32,7 +44,11 @@ public class Methods implements MethodsInteface {
         
     }
 
-
+    /**
+     * Método que permite ordenar una serie de números con el algoritmo de Burbuja
+     *
+     * @param listBubble
+     */
     @Override
     public void bubbleMethod(List<Double> listBubble) {
         double aux;
@@ -49,6 +65,11 @@ public class Methods implements MethodsInteface {
 
     }
 
+    /**
+     * Método que permite ordenar una serie de números con el algoritmo de Quik Sort
+     *
+     * @param listQuikSort, start, end
+     */
     @Override
     public void quikSortMethod(List<Double> listQuikSort, int start, int end) {
                
@@ -60,6 +81,11 @@ public class Methods implements MethodsInteface {
         
     }
 
+    /**
+     * Método que permite ordenar una serie de números con el algoritmo de Quik Sort
+     *
+     * @param listQuikSort, start, end
+     */
     @Override
     public int partitionMethod(List<Double> listQuikSort, int start, int end) {
          int i = start - 1;

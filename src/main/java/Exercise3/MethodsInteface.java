@@ -1,14 +1,20 @@
 
 package Exercise3;
 
+/**
+ * Libreria que permite utilizar ArrayList durante el programa
+ */
 import java.util.List;
 
 /**
  *
- * @author Lmendoza
+ * @author Luis mendoza
  */
 public interface MethodsInteface {
     
+    /**
+     * Métodos de la interfaz
+     */
     public List genRamNumbers();
     
      public void showRanNumbers(List<Double> numsRandoms);

@@ -1,6 +1,9 @@
 
 package Exercise4;
 
+/**
+ * Libreria que permite utilizar ArrayList durante el programa
+ */
 import java.util.ArrayList;
 
 /**
@@ -9,6 +12,9 @@ import java.util.ArrayList;
  */
 public interface VehicleInterface {
     
+    /**
+     * Métodos de la interfaz
+     */
     public void createVehicle( ArrayList<Vehicle> vehicles);
      public void showVehicle( ArrayList<Vehicle> vehicles);
 
